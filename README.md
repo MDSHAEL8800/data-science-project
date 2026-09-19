@@ -121,13 +121,6 @@ The trained models can be evaluated using several classification metrics:
 - F1-Score
 - Confusion Matrix
 
-Example evaluation:
-
-```text
-Accuracy
-Precision
-Recall
-F1-Score
 
 # 📌Project 2- overview.
 
