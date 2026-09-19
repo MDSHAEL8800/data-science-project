@@ -121,37 +121,40 @@ The trained models can be evaluated using several classification metrics:
 - F1-Score
 - Confusion Matrix
 
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 📌Project 2- overview.
 
 # Medical Cost Prediction Using Machine Learning Regression
 
-A machine learning regression project for predicting individual medical insurance charges using the **Medical Cost Personal Dataset**.
 
-## Project Overview
+Goal- Medical insurance charges vary between individuals based on demographic and lifestyle-related characteristics. This project applies an end-to-end **data science and machine learning regression workflow** to predict individual medical insurance charges.
 
-The objective is to build and compare regression models that learn relationships between demographic, lifestyle, and personal attributes and individual medical insurance charges.
+### Workflow
 
-**Workflow:** Data Collection → Data Cleaning → EDA → Visualization → Feature Engineering → Model Training → Evaluation → Prediction
+**Data Collection → Data Cleaning → EDA → Visualization → Feature Engineering → Model Training → Evaluation → Prediction**
 
-## Objectives
+## Project Objectives
 
 - Understand the Medical Cost Personal Dataset
-- Clean and preprocess the data
+- Inspect and clean the dataset
+- Check missing values and duplicate records
+- Analyze potential outliers
 - Perform Exploratory Data Analysis (EDA)
-- Analyze distributions and feature-target relationships
-- Detect potential outliers
+- Visualize distributions and feature-target relationships
 - Create meaningful interaction features
 - Encode categorical variables
-- Train multiple regression algorithms
+- Train and compare multiple regression algorithms
 - Evaluate models using MAE, RMSE, R², and MAPE
-- Compare model performance
-- Predict medical charges for unseen test observations
+- Select a model based on the defined evaluation criteria
+- Generate predictions for unseen test observations
+- Analyze prediction errors and residuals
+
+---
 
 ## Dataset
 
 **Dataset:** Medical Cost Personal Dataset  
-**Target:** `charges`
+**Target Variable:** `charges`
 
 | Feature | Type | Description |
 |---|---|---|
@@ -172,11 +175,13 @@ The objective is to build and compare regression models that learn relationships
 - **Target variable:** `charges`
 - **Source:** Medical Cost Personal Dataset (Kaggle)
 
-## Exploratory Data Analysis
+---
 
-The EDA stage examines the structure, distribution, and relationships in the dataset before model development.
+# Exploratory Data Analysis
 
-### Statistical Overview
+EDA was performed to understand the dataset before model development.
+
+## Statistical Overview
 
 | Variable | Mean |
 |---|---:|
@@ -185,20 +190,42 @@ The EDA stage examines the structure, distribution, and relationships in the dat
 | Children | 1.10 |
 | Charges | 13,279.12 USD |
 
-EDA includes:
+The EDA includes:
 
 - Descriptive statistics using `df.describe()`
 - Medical charges distribution
 - Log-transformed charges distribution
-- Age vs. charges
-- BMI vs. charges
-- Smoker vs. charges
+- Age vs. Charges analysis
+- BMI vs. Charges analysis
+- Smoker vs. Charges comparison
 - Correlation analysis
 - Outlier analysis
 
+### EDA Analysis
+
+The target variable `charges` has a wide distribution, indicating substantial variation in individual medical costs.
+
+Smoking status shows a strong relationship with medical charges. Age and BMI were also examined against charges to understand their relationships with the target.
+
 Potential outliers were examined using the IQR method. Extreme medical charges were not automatically removed because they may represent legitimate high-cost insurance cases.
 
-## Feature Engineering
+---
+
+# Data Cleaning and Preprocessing
+
+The project performed the following preprocessing steps:
+
+1. Inspected dataset shape, columns, and data types.
+2. Checked for missing values.
+3. Identified duplicate records.
+4. Removed the identified duplicate record.
+5. Examined potential outliers using the IQR method.
+6. Prepared categorical variables for machine learning.
+7. Prepared numerical and engineered features for model development.
+
+---
+
+# Feature Engineering
 
 Interaction features were created to represent combined effects involving smoking status:
 
