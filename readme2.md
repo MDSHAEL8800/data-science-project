@@ -1,6 +1,6 @@
-import pypandoc
+# Project 2- overview.
 
-readme = """# Medical Cost Prediction Using Machine Learning Regression
+# Medical Cost Prediction Using Machine Learning Regression
 
 A machine learning regression project for predicting individual medical insurance charges using the **Medical Cost Personal Dataset**.
 
